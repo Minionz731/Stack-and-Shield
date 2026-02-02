@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Systems | Stack & Shield</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="topbar">
+  <div class="logo">
+    <img src="assets/images/logo.png" alt="Stack & Shield">
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="process.html">Process</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="page-hero-content">
+    <span class="badge">AI Systems</span>
+    <h1>Automation that works<br>while you sleep</h1>
+    <p>AI isn't a buzzword here — it's an operational advantage. We integrate intelligent tools directly into your platform to reduce manual work and scale your impact without scaling your team.</p>
+  </div>
+</section>
+
+<!-- AI Capabilities -->
+<section class="section">
+  <div class="section-header reveal">
+    <span class="badge">Capabilities</span>
+    <h2>What we automate</h2>
+    <p>Every AI tool we integrate is purpose-built for your platform — not a generic plugin dropped in and forgotten.</p>
+  </div>
+
+  <div class="grid grid-3">
+    <div class="card reveal reveal-d1">
+      <div class="icon">💬</div>
+      <h3>AI Website Assistant</h3>
+      <p>A 24/7 intelligent chatbot that answers questions, guides visitors through your site, and captures qualified leads — even when you're offline.</p>
+    </div>
+    <div class="card reveal reveal-d2">
+      <div class="icon">🎯</div>
+      <h3>AI Lead Qualification</h3>
+      <p>Automatically scores incoming leads, filters out spam, and routes serious prospects to the right team member instantly.</p>
+    </div>
+    <div class="card reveal reveal-d3">
+      <div class="icon">📈</div>
+      <h3>Automated Reports</h3>
+      <p>Monthly system health, security activity, and business performance summaries generated and delivered without lifting a finger.</p>
+    </div>
+    <div class="card reveal reveal-d1">
+      <div class="icon">🔄</div>
+      <h3>Workflow Automation</h3>
+      <p>Connect your tools seamlessly: forms → email → CRM → dashboards. No manual steps, no dropped leads, no gaps.</p>
+    </div>
+    <div class="card reveal reveal-d2">
+      <div class="icon">🧠</div>
+      <h3>Smart Content Routing</h3>
+      <p>Intelligent categorization and routing of support requests, inquiries, and feedback to the right channels automatically.</p>
+    </div>
+    <div class="card reveal reveal-d3">
+      <div class="icon">⚡</div>
+      <h3>Real-Time Alerts</h3>
+      <p>AI-powered anomaly detection that flags unusual activity and notifies your team before issues become problems.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-box reveal">
+    <h2>Ready to automate<br>your operations?</h2>
+    <p>Tell us where your biggest time sinks are and we'll show you exactly how AI can solve them — with a working demo, not a pitch deck.</p>
+    <div class="cta-buttons">
+      <a href="contact.html" class="btn">Book a Demo →</a>
+      <a href="services.html" class="btn btn-outline">Back to Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo-text">Stack & Shield</div>
+      <p>A digital systems and security studio. We design, build, and protect modern web platforms that businesses can trust and scale.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Pages</h4>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="process.html">Process</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Specialize In</h4>
+      <a href="services.html">Web Development</a>
+      <a href="security.html">Cybersecurity</a>
+      <a href="ai.html">AI Automation</a>
+      <a href="pricing.html">Maintenance Plans</a>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <a href="mailto:hello@stackandshield.com">hello@stackandshield.com</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Twitter / X</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Stack & Shield. All rights reserved.</p>
+    <p>Built secure. Designed to scale.</p>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

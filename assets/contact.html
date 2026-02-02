@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Stack & Shield</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="topbar">
+  <div class="logo">
+    <img src="assets/images/logo.png" alt="Stack & Shield">
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="process.html">Process</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+</header>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="page-hero-content">
+    <span class="badge">Contact</span>
+    <h1>Let's build something<br>great together</h1>
+    <p>Have a project in mind? Tell us about it and we'll get back to you within 48 hours with a clear plan.</p>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="section">
+  <div class="contact-grid">
+
+    <!-- Left: Info -->
+    <div class="contact-info reveal">
+      <h3>Get in touch</h3>
+      <p>Whether you're starting from scratch or need to secure and scale an existing platform, we'd love to hear from you. No commitment — just a conversation.</p>
+
+      <div class="contact-detail">
+        <div class="cd-icon">📧</div>
+        <div class="cd-text">
+          <strong>Email</strong>
+          s&s.support@stackandshield.com
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="cd-icon">📍</div>
+        <div class="cd-text">
+          <strong>Location</strong>
+          Johannesburg, South Africa
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="cd-icon">⏱️</div>
+        <div class="cd-text">
+          <strong>Response Time</strong>
+          Within 48 hours
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="cd-icon">💼</div>
+        <div class="cd-text">
+          <strong>Working Hours</strong>
+          Mon – Fri, 8am – 6pm SAST
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Form -->
+    <div class="contact-form reveal reveal-d1">
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" placeholder="John Smith">
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="john@company.com">
+      </div>
+      <div class="form-group">
+        <label>Service Interest</label>
+        <select>
+          <option value="">What are you looking for?</option>
+          <option value="website">Website Development</option>
+          <option value="webapp">Web Application</option>
+          <option value="security">Cybersecurity & Hardening</option>
+          <option value="ai">AI Automation</option>
+          <option value="maintenance">Maintenance & Monitoring</option>
+          <option value="launch">Full Digital Launch</option>
+          <option value="full">Full Package (Development + Security)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Tell Us About Your Project</label>
+        <textarea placeholder="Describe your goals, timeline, budget range, and any specific requirements..."></textarea>
+      </div>
+      <button type="button" class="btn" style="font-size: 0.9rem;">Send Message →</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo-text">Stack & Shield</div>
+      <p>A digital systems and security studio. We design, build, and protect modern web platforms that businesses can trust and scale.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Pages</h4>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="process.html">Process</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Specialize In</h4>
+      <a href="services.html">Web Development</a>
+      <a href="security.html">Cybersecurity</a>
+      <a href="ai.html">AI Automation</a>
+      <a href="pricing.html">Maintenance Plans</a>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <a href="mailto:s&s.support@stackandshield.com">s&s.support@stackandshield.com</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Twitter / X</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Stack & Shield. All rights reserved.</p>
+    <p>Built secure. Designed to scale.</p>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
