@@ -78,32 +78,53 @@
 
     <!-- Right: Form -->
     <div class="contact-form reveal reveal-d1">
-      <div class="form-group">
-        <label>Your Name</label>
-        <input type="text" placeholder="John Smith">
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <!-- Hidden fields for Netlify -->
+        <input type="hidden" name="form-name" value="contact">
+        
+        <!-- Honeypot for spam protection (hidden from real users) -->
+        <p style="display: none;">
+          <label>Don't fill this out if you're human: <input name="bot-field"></label>
+        </p>
+
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="John Smith" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="john@company.com" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="service">Service Interest</label>
+          <select id="service" name="service" required>
+            <option value="">What are you looking for?</option>
+            <option value="website">Website Development</option>
+            <option value="webapp">Web Application</option>
+            <option value="security">Cybersecurity & Hardening</option>
+            <option value="ai">AI Automation</option>
+            <option value="maintenance">Maintenance & Monitoring</option>
+            <option value="launch">Full Digital Launch</option>
+            <option value="full">Full Package (Development + Security)</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Tell Us About Your Project</label>
+          <textarea id="message" name="message" placeholder="Describe your goals, timeline, budget range, and any specific requirements..." required></textarea>
+        </div>
+        
+        <button type="submit" class="btn" style="font-size: 0.9rem;">Send Message →</button>
+      </form>
+
+      <!-- Success message (shown after submission) -->
+      <div id="success-message" style="display: none; padding: 30px; background: var(--card-bg); border: 1px solid var(--teal); border-radius: 14px; text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 12px;">✓</div>
+        <h3 style="font-family: 'Sora', sans-serif; color: var(--teal); margin-bottom: 8px;">Message Sent!</h3>
+        <p style="color: var(--gray); font-size: 0.9rem;">Thanks for reaching out. We'll get back to you within 48 hours.</p>
       </div>
-      <div class="form-group">
-        <label>Email Address</label>
-        <input type="email" placeholder="john@company.com">
-      </div>
-      <div class="form-group">
-        <label>Service Interest</label>
-        <select>
-          <option value="">What are you looking for?</option>
-          <option value="website">Website Development</option>
-          <option value="webapp">Web Application</option>
-          <option value="security">Cybersecurity & Hardening</option>
-          <option value="ai">AI Automation</option>
-          <option value="maintenance">Maintenance & Monitoring</option>
-          <option value="launch">Full Digital Launch</option>
-          <option value="full">Full Package (Development + Security)</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Tell Us About Your Project</label>
-        <textarea placeholder="Describe your goals, timeline, budget range, and any specific requirements..."></textarea>
-      </div>
-      <button type="button" class="btn" style="font-size: 0.9rem;">Send Message →</button>
     </div>
 
   </div>
@@ -145,10 +166,19 @@
 </footer>
 
 <script>
+  // Scroll reveal animations
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Handle Netlify form success
+  if (window.location.search.includes('success=true')) {
+    const form = document.querySelector('form[name="contact"]');
+    const successMsg = document.getElementById('success-message');
+    if (form) form.style.display = 'none';
+    if (successMsg) successMsg.style.display = 'block';
+  }
 </script>
 </body>
 </html>
